@@ -1,0 +1,30 @@
+#include<iostream>
+
+int main() {
+    int num;
+    int spaces;
+
+    std::cin >> num;
+    
+    if(num%2 == 0) {
+        spaces = 2 * (num-1);
+    } else {
+        spaces = 2 * (num - 1) - 1;
+    }
+
+    for(int row = 1; row <= num; row++) {
+        for(int i = 1; i <= spaces; i++) {
+            std::cout << " ";
+        }
+
+        spaces -= 2;
+
+        for(int n = 1; n <= 2 * row - 1; n++) {
+            std::cout << n << " ";
+        }
+
+        std::cout << "\n";
+    }
+
+    return 0;
+}
